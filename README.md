@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Overview
+
+This project is a demonstration of my getting to grips with React and Electron. At current functionality it is a minimalistic TODO list, which once hosted can be accessed in a browser or using electron (`npm run electron-start`).
+
+## v1.0.0
+
+Functional TODO list with minimal features. The list counter resets upon finishing all tasks. Utilizes local storage to store list items persistently. 
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -11,6 +19,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
+
+### `npm run electron-start`
+
+After running `npm run start`, use `npm run electron-start` to open the app as a desktop application.
 
 ### `npm test`
 
