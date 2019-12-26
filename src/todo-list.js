@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Item from './todo-item';
 
 class List extends Component {
-    generate_list(list) {
+    generate_list(list, cb) {
         return list.map((k) => {
                 // alert(v.name);
                 return (
@@ -10,6 +10,7 @@ class List extends Component {
                         <Item
                             name={k.name}
                             num={k.num}
+                            cb={cb}
                         />
                     </div>
                 );
@@ -18,7 +19,7 @@ class List extends Component {
     }
 
     render() {
-        return this.generate_list(this.props.list);
+        return this.generate_list(this.props.list, this.props.remove_item_callback);
     }
 }
 

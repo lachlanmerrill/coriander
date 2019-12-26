@@ -6,26 +6,30 @@ class TodoItem extends Component {
         super(props);
         this.state = {
             name: props.name,
-            num: props.num
+            num: props.num,
+            callback: props.cb
         };
         this.callback = this.callback.bind(this);
     }
 
     callback() {
-        alert("Clicked " + this.state.num + ": " + this.state.name);
+      console.log("Remove callback triggered on " + this.state.num + " with name " + this.state.name);
+        this.state.callback(this.state.num);
     }
 
     todo_item(name, num) {
-        return (
-            <div>
-                <input type="checkbox" name={name} value={num} onClick={this.callback}/>
-                <span>{num} {name}</span>
-            </div>
-        );
+        return
     }
 
     render() {
-        return this.todo_item(this.props.name, this.props.num);
+      this.state.name = this.props.name;
+      this.state.num = this.props.num;
+        return (
+            <div>
+                <input type="button" name={this.state.name} value={this.state.num} onClick={this.callback}/>
+                <span> {this.state.name}</span>
+            </div>
+        );
     }
 }
 
