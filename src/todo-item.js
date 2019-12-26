@@ -13,7 +13,6 @@ class TodoItem extends Component {
     }
 
     callback() {
-      console.log("Remove callback triggered on " + this.state.num + " with name " + this.state.name);
         this.state.callback(this.state.num);
     }
 

@@ -31,7 +31,6 @@ class App extends Component {
     remove_item_callback(num) {
       let i = 0;
       for (i = 0; i < this.state.items.length - 1; i++) {
-        console.log("Checking item " + i + ": " + this.state.items[i].num + " against condition " + num);
         if (this.state.items[i].num === num) {
           break;
         }
@@ -58,6 +57,7 @@ class App extends Component {
       return (
         <div className="App">
           <header className="App-header">
+
 
             TODO List
             <AddItem  add_item_callback={this.add_item_callback}/>
