@@ -17,5 +17,5 @@ input {
   height: 40px;
   font-size: 25px;
   min-width: 40px;
-  align-items: left;
+  align-items: flex-start;
 }

@@ -16,10 +16,6 @@ class TodoItem extends Component {
         this.state.callback(this.state.num);
     }
 
-    todo_item(name, num) {
-        return
-    }
-
     render() {
       this.state.name = this.props.name;
       this.state.num = this.props.num;
