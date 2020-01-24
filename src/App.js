@@ -28,6 +28,12 @@ class App extends Component {
     render() {
       switch(this.state.options[this.state.index]) {
         case 'Calendar':
+            return (
+                <div className="App">
+                    <NavBar select_item_callback={this.navBarCallback} options={this.state.options}/>
+                    <h1>Under Construction</h1>
+                </div>
+            );
         case 'Todo':
         default:
         return (
