@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import ToDo from './ToDo.js';
 import NavBar from './NavBar.js';
+import Calendar from './Calendar';
 
 class App extends Component {
     constructor(props) {
@@ -31,7 +32,7 @@ class App extends Component {
             return (
                 <div className="App">
                     <NavBar select_item_callback={this.navBarCallback} options={this.state.options}/>
-                    <h1>Under Construction</h1>
+                    <Calendar />
                 </div>
             );
         case 'Todo':
