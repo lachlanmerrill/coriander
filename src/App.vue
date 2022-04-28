@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <v-main>
+      <div id="app">
+        <Container/>
+      </div>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Container from './components/Container'
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  name: 'coriander-app',
+  components: { Container }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    background-color: var(--background-main);
+    width: 100vw;
+    height: 100vh;
+    padding: 0 0;
+    margin: 0 0;
+    border: 0 0;
+  }
 </style>
